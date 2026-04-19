@@ -245,23 +245,23 @@
 
             release.assets.forEach(asset => {
                 const name = asset.name.toLowerCase();
-                // Identificar archivo de Windows (.exe, msi, win.zip)
+                // Identificar archivo de Windows (.exe, msi, .nupkg, win.zip)
                 if (name.includes('.exe') || name.endsWith('.msi') || (name.includes('win') && name.endsWith('.zip'))) {
                     winAsset = asset;
                 }
-                // Identificar archivo de Mac ARM64 (.dmg, pkg)
-                if (name.includes('arm64') || name.includes('aarch64')) {
-                    if (name.endsWith('.dmg') || name.endsWith('mac.zip') || name.endsWith('.pkg')) {
+                // Identificar archivo de Mac (.dmg, .pkg) por indicadores de plataforma
+                if (name.includes('arm64') || name.includes('aarch64') || name.includes('osx') || name.includes('mac')) {
+                    if (name.endsWith('.dmg') || name.endsWith('.pkg') || name.endsWith('mac.zip')) {
                         macAsset = asset;
                     }
                 }
             });
 
-            // Si no hay especificado un ARM64, usar cualquier release dmg
+            // Si no se encontró con indicadores de plataforma, buscar cualquier .dmg o .pkg
             if (!macAsset) {
                 release.assets.forEach(asset => {
                     const name = asset.name.toLowerCase();
-                    if (name.endsWith('.dmg') || name.includes('mac.zip')) {
+                    if (name.endsWith('.dmg') || name.endsWith('.pkg') || name.includes('mac.zip')) {
                         macAsset = asset;
                     }
                 });
