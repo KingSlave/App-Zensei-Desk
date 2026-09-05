@@ -50,43 +50,157 @@
         </nav>
 
         <main class="container features-section">
-            <div class="section-header">
-                <h2>Políticas de Privacidad</h2>
-            </div>
-
             <section class="glass-panel content-panel">
-                <div class="section-block">
-                    <h3>Información personal y privacidad</h3>
-                    <ul>
-                        <li>Podrán procesarse en un servidor externo datos del equipo estrictamente necesarios para el control de uso.</li>
-                        <li>Los datos obtenidos del uso de Zensei Desk se almacenan y procesan en el equipo local del usuario, por lo que no son enviados a ningún servidor externo.</li>
-                        <li>Zensei Desk solo solicita permisos de lectura para sus cursos de Google Classroom, por lo que no tiene efectos que alteren su trabajo en sus cursos.</li>
-                    </ul>
+                <div class="section-header">
+                    <h2>Política de Privacidad — Zensei Desk</h2>
+                    <p class="policy-meta">Versión de la política: 2.0</p>
                 </div>
 
-                <div class="section-block">
-                    <h3>Aclaraciones importantes</h3>
-                    <ul>
-                        <li>
-                            Finalidad: Los datos se usan para autenticación y soporte.
-                        </li>
-                        <li>
-                            Conservación: La información se mantiene solo durante el tiempo necesario según la finalidad y normativa aplicable.
-                        </li>
-                        <li>
-                            Acceso y rectificación: Puedes solicitar revisión, corrección o eliminación de tus datos por los canales de contacto autorizados.
-                        </li>
-                        <li>
-                            Actualizaciones: Estas condiciones pueden cambiar; el uso continuado implica aceptación de la versión vigente.
-                        </li>
-                    </ul>
-                </div>
+                <div class="policy-content">
+                    <div class="section-block">
+                        <h3>1. Responsable del tratamiento</h3>
+                        <p>
+                            Zensei Desk es una aplicación de escritorio para docentes. Este documento describe, de forma clara y detallada, qué información trata la aplicación, con qué finalidad, dónde se almacena, con quién se comparte y qué derechos tienes como titular de los datos. Al instalar o usar Zensei Desk aceptas esta política.
+                        </p>
+                        <p><strong>Contacto:</strong> correo-de-contacto@dominio.com</p>
+                    </div>
 
-                <div class="section-block">
-                    <h3>Soporte y contacto</h3>
-                    <p>
-                        Para dudas sobre términos, privacidad o ejercicio de derechos relacionados con tus datos, contacta al equipo responsable por los canales definidos en la aplicación.
-                    </p>
+                    <div class="section-block">
+                        <h3>2. Descripción del servicio</h3>
+                        <p>
+                            Zensei Desk permite al docente importar cursos, temas, trabajos y listas de estudiantes desde Google Classroom, registrar y calcular calificaciones localmente, generar reportes y automatizar la captura de calificaciones en la plataforma académica institucional denominada AMBAR, utilizando las credenciales que el propio usuario proporciona.
+                        </p>
+                    </div>
+
+                    <div class="section-block">
+                        <h3>3. Información que se trata</h3>
+
+                        <h4>3.1 Datos de tu cuenta de Google (Google Classroom)</h4>
+                        <p>
+                            Zensei Desk solicita permisos de solo lectura sobre tu cuenta de Google mediante OAuth 2.0. Los permisos exactos solicitados son:
+                        </p>
+                        <table class="policy-table">
+                            <thead>
+                                <tr>
+                                    <th>Permiso (scope)</th>
+                                    <th>Uso</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><code>classroom.courses.readonly</code></td><td>Ver los cursos en los que impartes clase para importarlos a la aplicación.</td></tr>
+                                <tr><td><code>classroom.rosters.readonly</code></td><td>Ver la lista de estudiantes de tus cursos para crear tu base local de alumnos.</td></tr>
+                                <tr><td><code>classroom.profile.emails</code></td><td>Ver las direcciones de correo asociadas a tu cuenta y a los estudiantes de tus cursos.</td></tr>
+                                <tr><td><code>classroom.coursework.students.readonly</code></td><td>Ver los trabajos/actividades asignados a estudiantes y sus entregas para calcular calificaciones.</td></tr>
+                                <tr><td><code>classroom.coursework.me.readonly</code></td><td>Ver los trabajos asignados a ti como docente.</td></tr>
+                                <tr><td><code>classroom.topics.readonly</code></td><td>Ver los temas de los cursos para organizar las actividades por unidad/tema.</td></tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            La aplicación no modifica, elimina ni publica nada en Google Classroom: no cuenta con ningún permiso de escritura. No se accede a mensajes de Gmail, archivos de Drive, fotos ni ninguna otra información ajena a los permisos listados.
+                        </p>
+
+                        <h4>3.2 Token de acceso de Google</h4>
+                        <p>
+                            Para mantener tu sesión, la aplicación almacena el token de OAuth de Google exclusivamente en tu equipo, en la carpeta de datos locales del usuario. Este token nunca se transmite a servidores del desarrollador ni de terceros distintos de Google.
+                        </p>
+
+                        <h4>3.3 Datos académicos que gestionas en la aplicación</h4>
+                        <p>
+                            Los cursos importados, estudiantes (nombres, números de control, correos institucionales), actividades, calificaciones, configuración docente (nombre, clave, programa académico) y reportes que generes se guardan únicamente en tu equipo, en una base de datos local cifrada. Estos datos no se envían a ningún servidor del desarrollador.
+                        </p>
+
+                        <h4>3.4 Datos de licenciamiento y del equipo</h4>
+                        <p>
+                            Zensei Desk se distribuye mediante licencias. Para validar tu licencia y prevenir el uso fraudulento, la aplicación envía a su plataforma de licenciamiento los siguientes datos: tu clave de licencia, tu correo electrónico y un identificador de hardware generado a partir de características de tu equipo. Estos datos se usan exclusivamente para activar y verificar tu licencia y no se emplean con fines publicitarios ni de perfilado.
+                        </p>
+
+                        <h4>3.5 Credenciales institucionales (AMBAR)</h4>
+                        <p>
+                            Si decides usar la automatización de captura en la plataforma institucional AMBAR, tus credenciales de esa plataforma se guardan cifradamente en tu base de datos local y se emplean únicamente desde tu equipo para iniciar sesión en el portal de tu institución con tu intervención. Zensei Desk no recibe, almacena en servidor alguno ni comparte esas credenciales.
+                        </p>
+
+                        <h4>3.6 Actualizaciones</h4>
+                        <p>
+                            La aplicación consulta periódicamente el repositorio público de versiones en GitHub para comprobar y descargar actualizaciones. No se envía información personal en este proceso.
+                        </p>
+                    </div>
+
+                    <div class="section-block">
+                        <h3>4. Finalidad del tratamiento</h3>
+                        <ul>
+                            <li>Autenticarte con tu cuenta de Google y mostrar tus cursos y datos académicos.</li>
+                            <li>Gestionar calificaciones, reportes y procesos académicos en tu equipo.</li>
+                            <li>Validar y administrar tu licencia de uso.</li>
+                            <li>Operar la automatización de captura en plataformas institucionales a petición tuya.</li>
+                            <li>Ofrecer soporte y mantener la aplicación actualizada.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-block">
+                        <h3>5. Compartición de datos</h3>
+                        <p>
+                            Zensei Desk no vende, alquila ni comparte tu información personal con terceros con fines publicitarios o de marketing. Los únicos destinatarios son:
+                        </p>
+                        <ul>
+                            <li><strong>Google LLC:</strong> recibe las solicitudes de lectura a la API de Classroom que tú autorizas, conforme a sus propias políticas.</li>
+                            <li><strong>Plataforma de licenciamiento:</strong> recibe los datos indicados en 3.4 para validar tu licencia.</li>
+                            <li><strong>Tu institución educativa:</strong> recibe las calificaciones cuando tú autorizas su captura en la plataforma AMBAR con tus credenciales.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-block">
+                        <h3>6. Uso de datos conforme a la política de Google (Limited Use)</h3>
+                        <p>
+                            El uso que Zensei Desk hace de la información recibida de las API de Google se adherirá a la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, incluidos los requisitos de Uso Limitado (Limited Use). En particular, la información obtenida de Google no se usará para publicidad, no se venderá ni transferirá a terceros salvo con tu consentimiento o cuando la ley lo exija, y no se usará para inteligencia artificial ni modelos de aprendizaje automático.
+                        </p>
+                        <p>
+                            <strong>Declaración oficial (en inglés):</strong> "Zensei Desk's use and transfer to any other app of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements."
+                        </p>
+                    </div>
+
+                    <div class="section-block">
+                        <h3>7. Conservación y eliminación de datos</h3>
+                        <ul>
+                            <li><strong>Datos locales:</strong> permanecen en tu equipo hasta que decidas eliminarlos (desinstalando la aplicación o borrando la carpeta ZenseiDesk en tus datos locales) o hasta que revokes el acceso desde la aplicación.</li>
+                            <li><strong>Tokens de Google:</strong> se eliminan al cerrar sesión en la aplicación o al revocar el permiso en tu cuenta de Google.</li>
+                            <li><strong>Datos de licenciamiento:</strong> se conservan en la plataforma de licencias durante la vigencia de tu licencia y el tiempo necesario para fines de soporte y prevención de fraude; puedes solicitar su eliminación por los canales de contacto.</li>
+                            <li>No existen copias de tus datos académicos en servidores del desarrollador; al eliminar la app, esos datos desaparecen definitivamente.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-block">
+                        <h3>8. Tus derechos</h3>
+                        <p>
+                            Puedes ejercer en cualquier momento, por los canales de contacto indicados:
+                        </p>
+                        <ul>
+                            <li><strong>Acceso y rectificación:</strong> solicitar información sobre tus datos o su corrección.</li>
+                            <li><strong>Eliminación:</strong> solicitar la eliminación de tus datos de licenciamiento.</li>
+                            <li><strong>Revocar el acceso a Google:</strong> desde <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">https://myaccount.google.com/permissions</a>, donde puedes revocar en cualquier momento el acceso de Zensei Desk a tu cuenta.</li>
+                            <li><strong>Limitación/objeción:</strong> conforme a la normativa de protección de datos aplicable en tu jurisdicción.</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-block">
+                        <h3>9. Menores de edad</h3>
+                        <p>
+                            Zensei Desk está dirigida a personal docente y no está orientada a menores de 13 años. No recopilamos deliberadamente información de menores. Los datos de estudiantes que el docente gestiona se tratan localmente bajo su responsabilidad, conforme a las normativas institucionales aplicables.
+                        </p>
+                    </div>
+
+                    <div class="section-block">
+                        <h3>10. Medidas de seguridad</h3>
+                        <p>
+                            Aplicamos medidas técnicas razonables: cifrado de la base de datos local, transmisión cifrada (HTTPS) en todas las comunicaciones externas, y minimización de permisos solicitados a Google (solo lectura).
+                        </p>
+                    </div>
+
+                    <div class="section-block">
+                        <h3>11. Cambios en esta política</h3>
+                        <p>
+                            Podemos actualizar esta política para reflejar cambios en la aplicación o en la normativa. Publicaremos siempre la versión vigente en esta página; los cambios materiales serán notificados dentro de la aplicación. El uso continuado tras una actualización implica la aceptación de la versión vigente.
+                        </p>
+                    </div>
                 </div>
             </section>
         </main>
